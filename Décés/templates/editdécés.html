@@ -1,0 +1,75 @@
+{% extends 'indexdécés.html' %}
+{% block h1 %}Pour les actes décés {% endblock %}
+{% block content %}
+<form method="POST" class="post-form" action="/update/{{acte_décés.id}}">
+    {% csrf_token %}  
+    <div class="container">
+        <br>
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-4">
+                <h3> Modifier les actes de décés </h3>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">registre</label>
+            <div class="col-sm-4">
+                <input type="text"name="registre" id="id_registre" required maxlength="20" value="/{{Décés.registre}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">numéro</label>
+            <div class="col-sm-4">
+                <input type="text"name="numéro" id="id_numéro" required maxlength="20" value="/{{Décés.numéro}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">registre</label>
+            <div class="col-sm-4">
+                <input type="text"name="registre" id="id_registre" required maxlength="20" value="/{{Décés.registre}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">prenom</label>
+            <div class="col-sm-4">
+                <input type="text"name="prenom" id="id_prenom" required maxlength="20" value="/{{Décés.prenom}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">nom</label>
+            <div class="col-sm-4">
+                <input type="text"name="nom" id="id_nom" required maxlength="20" value="/{{Décés.nom}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">datenaiss</label>
+            <div class="col-sm-4">
+                <input type="text"name="datenaiss" id="id_datenaiss" required maxlength="20" value="/{{Décés.datenaiss}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">lieunaiss</label>
+            <div class="col-sm-4">
+                <input type="text"name="lieunaiss" id="id_lieunaiss" required maxlength="20" value="/{{Décés.lieunaiss}}"/>
+            </div>
+        </div>
+
+        
+        
+        
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label"> </label>
+            <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary"> Modifier</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

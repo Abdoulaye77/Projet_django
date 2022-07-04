@@ -1,0 +1,84 @@
+{% extends 'indexmairie.html' %}
+{% block h1 %}Pour la mairie {% endblock %}
+{% block content %}
+<form method="POST" class="post-form" action="/update/{{str_mairies.id}}">
+    {% csrf_token %}  
+    <div class="container">
+        <br>
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-4">
+                <h3> Modifier les info mairie </h3>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Commune</label>
+            <div class="col-sm-4">
+                <input type="text"name="Commune" id="id_Commune" required maxlength="20" value="/{{Mairie.Commune}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">maire</label>
+            <div class="col-sm-4">
+                <input type="text"name="maire" id="id_maire" required maxlength="20" value="/{{Mariage.maire}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">telephone1 </label>
+            <div class="col-sm-4">
+                <input type="text"name="telephone1" id="id_telephone1" required maxlength="20" value="/{{Mairie.telephone1}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">telephone2</label>
+            <div class="col-sm-4">
+                <input type="text"name="telephone2" id="id_telephone1" required maxlength="20" value="/{{Mairie.telephone1}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">adresse </label>
+            <div class="col-sm-4">
+                <input type="text"name="adresse" id="id_adresse" required maxlength="20" value="/{{Mairie.adresse}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">email</label>
+            <div class="col-sm-4">
+                <input type="text"name="email" id="id_email" required maxlength="20" value="/{{Mairie.email}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">site </label>
+            <div class="col-sm-4">
+                <input type="text"name="site" id="id_site" required maxlength="20" value="/{{Mairie.site}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">logo</label>
+            <div class="col-sm-4">
+                <input type="text"name="logo" id="id_logo" required maxlength="20" value="/{{Mairie.logo}}"/>
+            </div>
+        </div>
+
+
+
+
+        
+        
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label"> </label>
+            <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary"> Modifier</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

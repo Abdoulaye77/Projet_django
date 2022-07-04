@@ -1,0 +1,95 @@
+{%load static %}
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Gestion d'état civil</title>
+     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ </head>
+ <body>
+    <form method="POST" class="post-form" action="/mair/">
+        {% csrf_token %}  
+        <div class="container">
+            <br>
+            <div class="form-group row">
+              
+              <h3> Entrer les details de la mairie </h3>
+        
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Commune </label>
+                <div class="col-sm-4">
+                    {{ form.Commune}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">maire</label>
+                <div class="col-sm-4">
+                    {{ form.maire}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">telephone1 </label>
+                <div class="col-sm-4">
+                    {{ form.telephone1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">telephone2</label>
+                <div class="col-sm-4">
+                    {{ form.telephone2}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">adresse </label>
+                <div class="col-sm-4">
+                    {{ form.adresse}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">email</label>
+                <div class="col-sm-4">
+                    {{ form.email}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">site </label>
+                <div class="col-sm-4">
+                    {{ form.site}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">logo</label>
+                <div class="col-sm-4">
+                    {{ form.logo}}
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label"> </label>
+                <div class="col-sm-4">
+                <button type="submit" class="btn btn-primary"> Enrigistrer</button>
+                </div>
+            </div>
+        </div>
+    </form>
+<h3>{% block h1 %}{% endblock %}</h3>
+    {% block content %}
+
+    {% endblock %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+ </body>
+ </html>

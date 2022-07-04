@@ -1,0 +1,232 @@
+{%load static %}
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Gestion d'état civil</title>
+     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ </head>
+ <body>
+    <form method="POST" class="post-form" action="/Mari/">
+        {% csrf_token %}  
+        <div class="container">
+            <br>
+            <div class="form-group row">
+              
+                <h3> Entrer les details de Déclaration mariage </h3>
+               
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">categorie </label>
+                <div class="col-sm-4">
+                    {{ form.categorie}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">numero</label>
+                <div class="col-sm-4">
+                    {{ form.numero}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">requerant1 </label>
+                <div class="col-sm-4">
+                    {{ form.requerant1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">profession_req1</label>
+                <div class="col-sm-4">
+                    {{ form.profession_req1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">domicile_req1 </label>
+                <div class="col-sm-4">
+                    {{ form.domicile_req1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">date_req1</label>
+                <div class="col-sm-4">
+                    {{ form.date_req1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">lieu_naiss_req1 </label>
+                <div class="col-sm-4">
+                    {{ form.lieu_naiss_req1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">pere_req1</label>
+                <div class="col-sm-4">
+                    {{ form.pere_req1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">mere_req1 </label>
+                <div class="col-sm-4">
+                    {{ form.mere_req1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">temoin_req1</label>
+                <div class="col-sm-4">
+                    {{ form.temoin_req1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">tel_temoin_req1</label>
+                <div class="col-sm-4">
+                    {{ form.tel_temoin_req1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">profession_temoin_req1 </label>
+                <div class="col-sm-4">
+                    {{ form.profession_temoin_req1}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">conjoint</label>
+                <div class="col-sm-4">
+                    {{ form.conjoint}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">requerant2 </label>
+                <div class="col-sm-4">
+                    {{ form.requerant2}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">profession_req2</label>
+                <div class="col-sm-4">
+                    {{ form.profession_req2}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">domicile_req2 </label>
+                <div class="col-sm-4">
+                    {{ form.domicile_req2}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">date_req2</label>
+                <div class="col-sm-4">
+                    {{ form.date_req2}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">lieu_naiss_req2 </label>
+                <div class="col-sm-4">
+                    {{ form.lieu_naiss_req2}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">pere_req2</label>
+                <div class="col-sm-4">
+                    {{ form.pere_req2 }}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">mere_req2 </label>
+                <div class="col-sm-4">
+                    {{ form.mere_req2}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">temoin_req2</label>
+                <div class="col-sm-4">
+                    {{ form.temoin_req2}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">tel_temoin_req2 </label>
+                <div class="col-sm-4">
+                    {{ form.tel_temoin_req2}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">profession_temoin_req2</label>
+                <div class="col-sm-4">
+                    {{ form.profession_temoin_req2}}
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">regime</label>
+                <div class="col-sm-4">
+                    {{ form.regime}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">date_mariage </label>
+                <div class="col-sm-4">
+                    {{ form.date_mariage}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">heure_mariage</label>
+                <div class="col-sm-4">
+                    {{ form.heure_mariage}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">lieu_mariage </label>
+                <div class="col-sm-4">
+                    {{ form.lieu_mariage}}
+                </div>
+            </div>
+
+
+
+            
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label"> </label>
+                <div class="col-sm-4">
+                <button type="submit" class="btn btn-primary"> Enrigistrer</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <h3>{% block h1 %}{% endblock %}</h3>
+    {% block content %}
+
+    {% endblock %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+ </body>
+ </html>

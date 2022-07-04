@@ -1,0 +1,44 @@
+{% extends 'indexmairie.html' %}
+{% block h1 %}Declaration de mariage {% endblock %}
+{% block content %}
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+        <tr>
+            <th>Commune</th>
+            <th>maire</th>
+            <th>telephone1</th>
+            <th>telephone2</th>
+            <th>adresse</th>
+            <th>email</th>
+            <th>site</th>
+            <th>logo</th>
+        
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+    {% for str_mairie in str_mairies %}
+    <tr>
+        <td>{{Actes_Naissance.Commune}}</td>
+        <td>{{Actes_Naissance.maire}}</td>
+        <td>{{Actes_Naissance.telephone1}}</td>
+        <td>{{Actes_Naissance.telephone2}}</td>
+        <td>{{Actes_Naissance.adresse}}</td>
+        <td>{{Actes_Naissance.email}}</td>
+        <td>{{Actes_Naissance.site}}</td>
+        <td>{{Actes_Naissance.logo}}</td>
+        
+    
+
+        <td>
+            <a href="/edit/{{str_mairie.id}}"> <span class="glyphicon glyphicon-penci">Edit</span></a>
+            <a href="/delete/{{str_mairie.id}}">Delete</a>
+        </td>
+    </tr>
+    {% endfor%}
+    </tbody>
+    <br>
+    <a href="/mair" class="btn btn-primary"> Add a NEW record</a>     
+</table>
+{% endblock %}

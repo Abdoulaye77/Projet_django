@@ -15,8 +15,35 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from .views import Acceuil,home,indexmariage,indexnaissance,indexmairie
+from Utilisateur.views import login , creer_compt
+
+
+
 urlpatterns = [
-   
+    path('', Acceuil, name="Acceuil"),
+    path('', indexmairie, name="indexmairie"),
+    path('', indexmariage, name="indexmariage"),
+    path('', indexnaissance, name="indexnaissance"),
+    path('creer_compt',creer_compt, name="creer_compt"),
+    path('login/',login, name="login"),
+    
     path('admin/', admin.site.urls),
+
+    path('EtatCivil/', include('EtatCivil.urls')),
     path('EtatcivilNaiss/', include('EtatcivilNaiss.urls')),
+    path('Mairie/', include('Mairie.urls')),
+    path('Décés/', include('Décés.urls')),
+
+    path('Mari/', include('EtatCivil.urls')),
+    path('mair/', include('Mairie.urls')),
+    path('Naiss/', include('EtatcivilNaiss.urls')),
+    path('Dece/', include('Décés.urls')),
+    
+    path('showmariage/', include('EtatCivil.urls')),
+    path('showmairie/', include('Mairie.urls')),
+    path('shownaissance/', include('EtatcivilNaiss.urls')),
+     path('showdécés/', include('Décés.urls')),
+    
+
 ]

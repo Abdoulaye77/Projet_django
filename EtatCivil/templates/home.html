@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container mt-5 mb-5' >
+    <fontcolor="darkblue"><h2 class="mt-4 mb-4"> BIENVENU SUR LA PAGE PRINCIPALE DE LA  GESTION ETAT CIVILE MAIRIE</h2></font>
+    <div class='row' style="display:flex">
+        <div class='col-lg-4'>
+            <div class="card shadow" style="width: 18rem;">
+                <img src="https://www.bruaysurescaut.fr/fileadmin/_processed_/8/b/csm_Vignette_acte_de_naissance_ba7e0f08d0.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title text-center">Formulaire de Mariage</h5>
+                <class="card-text">Pour cette page, vous devez remplir le formulaire de mairiage. <br> </p>
+                <a href="{% url 'creer' %}" class="btn btn-warning card-text">Remplire</a>
+                    <a href="{% url 'login' %}" class="btn btn-success">Réserver</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class='col-lg-4' style="display:flex">
+            <div class="card shadow" style="width: 18rem;">
+                <img src="https://www.lassurance-obseques.fr/wp-content/uploads/2020/04/certificat-de-deces-illustration-1.jpg" alt="...">
+                <div class="card-body">
+                <h5 class="card-title text-center">Certificat de descé</h5>
+                <p class="card-text">Pour cette page, vous devez remplir le formulaire de mairiage.</p>
+                <a href="{% url 'mariage' %}" class="btn btn-warning text-center">Remplire</a>
+                    <a href="{% url 'login' %}" class="btn btn-success">Réserver</a>
+                </div>
+            </div>
+        </div>
+
+        <div class='col-lg-4' style="display:flex">
+            <div class="card shadow" style="width: 18rem;">
+                <img src="https://quelle-demarche.com/wp-content/uploads/2018/03/demande-acte-mariage.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title text-center">Formulaire de Mariage</h5>
+                <p class="card-text">Pour cette page, vous devez remplir le formulaire de mairiage.</p>
+                <a href="#" class="btn btn-warning">Remplire</a>
+                <a href="{% url 'login' %}" class="btn btn-success">Réserver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

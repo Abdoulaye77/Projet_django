@@ -13,38 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
-from django.contrib import admin
-from django.urls import path,include
-from django.conf import settings
-from .views import redirect_view
-from django.conf.urls.static import static 
-from EtatcivilNaiss import views
-from EtatcivilNaiss import models
-from EtatcivilNaiss import forms
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin', admin.site.urls),
-    path("login",views.login, name='login'),
-    path("", views.index, name='home'),
-    path("index",views.index, name='index'),
-    path("entrylogin", views.entrylogin, name="entry"),
-    path("searchtable1",views.searchtable1, name="entry"),
-    path("searchtable2",views.searchtable2, name="entry"),
-    path("searchtable3",views.searchtable3, name="entry"),
-    path("searchtable4",views.searchtable4, name="entry"),
-    #path("filters",views.filters, name="filters"),
-    path("ourusers",views.ourusers, name="entry"),
-    path("entrysignup", views.entrysignup, name="entry"),
-    path("searchin",views.searchin,name="searchin"),
-    #path("profile",views.profile,name="profile"),
-    path("profile/<str:pk_test>",views.profile, name="profile"),
-    path("update/<str:pk>",views.update, name="update"),
-    path("delete/<str:pk2>",views.delete, name="delete"),
-    
-    #path("d",views.d, name='d')
-    
-] 
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', views.Naiss,name='Naiss'),
+    path('', views.shownaissance,name='shownaissance'),
+    path('<int:id>/', views.editnaissance,name='editnaissance'),
+    path('<int:id>/', views.update,name='update'),
+    path('<int:id>/', views.destroy,name='destroy'),
+]

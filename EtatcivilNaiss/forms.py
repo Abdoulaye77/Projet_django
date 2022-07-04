@@ -1,11 +1,11 @@
-from django import forms 
-from .models import Naissance
-  
-class NaissanceForm(forms.ModelForm): 
-    
-    class Meta: 
-        model = Naissance
-        fields = ['uname','psw','fname','lname','country','city','state','zipp','gender','interested_in','marital_status','religion','occupation','education_status','subject','dob','dp']
+from django import forms
+from EtatcivilNaiss.models import Naissance
+
+
+class NaissanceForm(forms.ModelForm):  
+    class Meta:  
+        model = Naissance  
+        fields = "__all__"
         """widgets = {
             'numero_registre': forms.TextInput(attrs={'class':'form-control'}),
             'annee': forms.TextInput(attrs={'class':'form-control'}),

@@ -1,0 +1,80 @@
+{% extends 'indexmariage.html' %}
+{% block h1 %}Declaration de mariage {% endblock %}
+{% block content %}
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+        <tr>
+            <th>categorie Mariage</th>
+            <th>numero</th>
+            <th>requerant1</th>
+            <th>profession_req1</th>
+            <th>domicile_req1</th>
+            <th>date_req1</th>
+            <th>lieu_naiss_req1</th>
+            <th>pere_req1</th>
+            <th>mere_req1</th>
+            <th>temoin_req1</th>
+            <th>tel_temoin_req1</th>
+            <th>profession_temoin_req1</th>
+            <th>conjoint</th>
+            <th>requerant2</th>
+            <th>profession_req2</th>
+            <th>domicile_req2</th>
+            <th>date_req2</th>
+            <th>lieu_naiss_req2</th>
+            <th>pere_req2</th>
+            <th>mere_req2</th>
+            <th>temoin_req2</th>
+            <th>tel_temoin_req2</th>
+            <th>profession_temoin_req2</th>
+            <th>regime</th>
+            <th>date_mariage</th>
+            <th>heure_mariage</th>
+            <th>lieu_mariage</th>
+
+
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+    {% for Actes_Mariage in Actes_Mariages %}
+    <tr>
+        <td>{{Actes_Mariage.categorie}}</td>
+        <td>{{Actes_Mariage.numero}}</td>
+        <td>{{Actes_Mariage.requerant1}}</td>
+        <td>{{Actes_Mariage.profession_req1}}</td>
+        <td>{{Actes_Mariage.domicile_req1}}</td>
+        <td>{{Actes_Mariage.date_req1}}</td>
+        <td>{{Actes_Mariage.lieu_naiss_req1}}</td>
+        <td>{{Actes_Mariage.pere_req1}}</td>
+        <td>{{Actes_Mariage.mere_req1}}</td>
+        <td>{{Actes_Mariage.temoin_req1}}</td>
+        <td>{{Actes_Mariage.tel_temoin_req1}}</td>
+        <td>{{Actes_Mariage.profession_temoin_req1}}</td>
+        <td>{{Actes_Mariage.conjoint}}</td>
+        <td>{{Actes_Mariage.requerant2}}</td>
+        <td>{{Actes_Mariage.profession_req2}}</td>
+        <td>{{Actes_Mariage.domicile_req2}}</td>
+        <td>{{Actes_Mariage.date_req2}}</td>
+        <td>{{Actes_Mariage.lieu_naiss_req2}}</td>
+        <td>{{Actes_Mariage.pere_req2}}</td>
+        <td>{{Actes_Mariage.mere_req2}}</td>
+        <td>{{Actes_Mariage.temoin_req2}}</td>
+        <td>{{Actes_Mariage.tel_temoin_req2}}</td>
+        <td>{{Actes_Mariage.profession_temoin_req2}}</td>
+        <td>{{Actes_Mariage.regime}}</td>
+        <td>{{Actes_Mariage.date_mariage}}</td>
+        <td>{{Actes_Mariage.heure_mariage}}</td>
+        <td>{{Actes_Mariage.lieu_mariage}}</td>
+        <td>
+            <a href="/edit/{{Actes_Mariage.id}}"> <span class="glyphicon glyphicon-penci">Edit</span></a>
+            <a href="/delete/{{Actes_Mariage.id}}">Delete</a>
+        </td>
+    </tr>
+    {% endfor%}
+    </tbody>  
+    <br>
+    <a href="/mari" class="btn btn-primary"> Add a NEW record</a>   
+</table>
+{% endblock %}
