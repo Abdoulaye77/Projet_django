@@ -1,0 +1,54 @@
+{% extends 'Acceuil.html' %}
+{% block h1 %}Declaration de mariage {% endblock %}
+{% block content %}
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+        <tr>
+            <th>Numero_registre</th>
+            <th>Annee</th>
+            <th>Categorie</th>
+            <th>Sexe</th>
+            <th>Nom</th>
+            <th>Prenoms</th>
+            <th>Date_naiss</th>
+            <th>Heure_naiss</th>
+            <th>Pere</th>
+            <th>Mrofession_pere</th>
+            <th>Mere</th>
+            <th>Profession_mere</th>
+            <th>Ajouter_le</th>
+            <th>Modifier_le</th>
+        
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+    {% for Actes_Naissance in Actes_Naissances %}
+    <tr>
+        <td>{{Actes_Naissance.numero_registre}}</td>
+        <td>{{Actes_Naissance.annee}}</td>
+        <td>{{Actes_Naissance.categorie}}</td>
+        <td>{{Actes_Naissance.sexe}}</td>
+        <td>{{Actes_Naissance.nom}}</td>
+        <td>{{Actes_Naissance.prenoms}}</td>
+        <td>{{Actes_Naissance.date_naiss}}</td>
+        <td>{{Actes_Naissance.heure_naiss}}</td>
+        <td>{{Actes_Naissance.pere_req1}}</td>
+        <td>{{Actes_Naissance.pere}}</td>
+        <td>{{Actes_Naissance.profession_pere}}</td>
+        <td>{{Actes_Naissance.mere}}</td>
+        <td>{{Actes_Naissance.profession_mere}}</td>
+        <td>{{Actes_Naissance.ajouter_le}}</td>
+        <td>{{Actes_Naissance.modifier_le}}</td>
+        
+
+        <td>
+            <a href="/edit/{{Actes_Naissance.id}}"> <span class="glyphicon glyphicon-penci">Edit</span></a>
+            <a href="/delete/{{Actes_Naissance.id}}">Delete</a>
+        </td>
+    </tr>
+    {% endfor%}
+    </tbody>    
+</table>
+{% endblock %}

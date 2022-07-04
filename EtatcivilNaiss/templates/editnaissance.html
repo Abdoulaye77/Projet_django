@@ -1,0 +1,126 @@
+{% extends 'Acceuil.html' %}
+{% block h1 %}Declaration de mariage {% endblock %}
+{% block content %}
+<form method="POST" class="post-form" action="/update/{{Actes_Naissance.id}}">
+    {% csrf_token %}  
+    <div class="container">
+        <br>
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-4">
+                <h3> Modifier une declaration de Naissance </h3>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">numero_registre</label>
+            <div class="col-sm-4">
+                <input type="text"name="numero_registre" id="id_numero_registre" required maxlength="20" value="/{{Mariage.numero_registre}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">annee</label>
+            <div class="col-sm-4">
+                <input type="text"name="annee" id="id_annee" required maxlength="20" value="/{{Mariage.annee}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">categorie </label>
+            <div class="col-sm-4">
+                <input type="text"name="categorie" id="id_categorie" required maxlength="20" value="/{{Mariage.categorie}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">sexe</label>
+            <div class="col-sm-4">
+                <input type="text"name="sexe" id="id_sexe" required maxlength="20" value="/{{Mariage.sexe}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">nom </label>
+            <div class="col-sm-4">
+                <input type="text"name="nom" id="id_nom" required maxlength="20" value="/{{Mariage.nom}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">prenoms</label>
+            <div class="col-sm-4">
+                <input type="text"name="prenoms" id="id_prenoms" required maxlength="20" value="/{{Mariage.prenoms}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">date_naiss </label>
+            <div class="col-sm-4">
+                <input type="text"name="date_naiss" id="id_date_naiss" required maxlength="20" value="/{{Mariage.date_naiss}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">heure_naiss</label>
+            <div class="col-sm-4">
+                <input type="text"name="heure_naiss" id="id_heure_naiss" required maxlength="20" value="/{{Mariage.heure_naiss}}"/>
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">pere </label>
+            <div class="col-sm-4">
+                <input type="text"name="pere" id="id_pere" required maxlength="20" value="/{{Mariage.pere}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">profession_pere</label>
+            <div class="col-sm-4">
+                <input type="text"name="profession_pere" id="id_profession_pere" required maxlength="20" value="/{{Mariage.profession_pere}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">mere</label>
+            <div class="col-sm-4">
+                <input type="text"name="mere" id="id_mere" required maxlength="20" value="/{{Mariage.mere}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">profession_mere </label>
+            <div class="col-sm-4">
+                <input type="text"name="profession_mere" id="id_profession_mere" required maxlength="20" value="/{{Mariage.profession_mere}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">ajouter_le</label>
+            <div class="col-sm-4">
+                <input type="text"name="ajouter_le" id="id_ajouter_le" required maxlength="20" value="/{{Mariage.ajouter_le}}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">modifier_le </label>
+            <div class="col-sm-4">
+                <input type="text"name="modifier_le" id="id_modifier_le" required maxlength="20" value="/{{Mariage.modifier_le}}"/>
+            </div>
+        </div>
+
+
+        
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label"> </label>
+            <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary"> Modifier</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
